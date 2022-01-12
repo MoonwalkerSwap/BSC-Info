@@ -40,7 +40,7 @@ export const V1_DATA_QUERY = gql`
       totalLiquidityUSD
       txCount
     }
-    exchanges(first: 200, orderBy: ethBalance, orderDirection: desc) {
+    exchanges(first: 200, orderBy: bnbBalance, orderDirection: desc) {
       bnbBalance
     }
   }
@@ -105,7 +105,7 @@ export const PRICES_BY_BLOCK = (tokenAddress, blocks) => {
   queryString += blocks.map(
     (block) => `
       b${block.timestamp}: bundle(id:"1", block: { number: ${block.number} }) { 
-        ethPrice
+        bnbPrice
       }
     `
   )

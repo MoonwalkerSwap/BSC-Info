@@ -174,7 +174,7 @@ export const SHARE_VALUE = (pairAddress, blocks) => {
   return gql(queryString)
 }
 
-export const BNB_PRICE = (block) => {
+export const ETH_PRICE = (block) => {
   const queryString = block
     ? `
     query bundles {
